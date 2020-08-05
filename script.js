@@ -33,8 +33,17 @@ video.addEventListener('play', () => {
         faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
 
         if (resizedDetections.length > 0 && resizedDetections[0].detection.score > 0.7 && resizedDetections[0].expressions.happy > 0.5){
-            alert('happy')
+           // alert('happy')
             //or play a music or something
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0);
+
+            const img = document.createElement("img");
+            img.src = canvas.toDataURL('image/webp');
+
+            document.getElementById('screenshot').appendChild(img)
         }
     }, 100)
    
