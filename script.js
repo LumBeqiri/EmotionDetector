@@ -19,6 +19,7 @@ video.addEventListener('play', () => {
     const canvas = faceapi.createCanvasFromMedia(video);
     const mydiv = document.querySelector(".video-panel")
     mydiv.appendChild(canvas)
+    
     const displaySize = { width: video.width, height: video.height }
     faceapi.matchDimensions(canvas, displaySize)
     setInterval(async () => {
@@ -30,5 +31,11 @@ video.addEventListener('play', () => {
         faceapi.draw.drawDetections(canvas, resizedDetections)
         faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
         faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+
+        if (resizedDetections.length > 0 && resizedDetections[0].detection.score > 0.7 && resizedDetections[0].expressions.happy > 0.5){
+            alert('happy')
+            //or play a music or something
+        }
     }, 100)
+   
 })

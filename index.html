@@ -32,19 +32,13 @@
         <p>Turn on the camera, and let it see your face</p>
       </div>
       
-      <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>
+    <button id="snap" onclick="snap()">Snap Photo</button>
+    <a id="downloadLnk" download="YourFileName.jpg">Download as image</a>
+      
     <div class="video-panel">
         <video id="video" width="720" height="560" autoplay muted></video>
     </div>
+    <canvas id="canvas" width="640" height="480"></canvas>
 
     <div class="footer">
       <div class="fitem-1">
@@ -99,7 +93,42 @@
       </div>
 
 
-      </div>  <!--footer ends here-->
+    </div>  <!--footer ends here-->
 
+    <script>
+        //code below used to only take a screenshot of the video not the expressions
+        // var videol=document.querySelector('video');
+        // var canvast=document.querySelector('canvas');
+        // var context=canvast.getContext('2d');
+        // var w,h,ratio;
+
+        // videol.addEventListener('loadedmetadata', function() {
+        //     ratio = videol.videoWidth/videol.videoHeight;
+        //     w = video.videoWidth-100;
+        //     h = parseInt(w/ratio,10);
+        //     canvast.width = w;
+        //     canvast.height = h;
+        // },false);
+
+        // function snap() {
+        //     context.fillRect(0,0,w,h);
+        //     context.drawImage(videol,0,0,w,h);
+        // }
+        
+        // function download() {
+        //     var dt = canvast.toDataURL('image/jpeg');
+        //     this.href = dt;
+        // };
+        // downloadLnk.addEventListener('click', download, false);
+
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
 </body>
 </html>
