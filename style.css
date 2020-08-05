@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Montserrat, Helvetica, sans-serif;
+    overflow-x:hidden;
   }
   
   .topnav {
@@ -67,3 +68,95 @@ canvas {
     position: absolute;
 }
 
+/*Footer styles*************************************************************/
+
+.footer{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  height: 290px;
+  width: 100%;
+  margin-top: 60px;
+  font-family: Montserrat, sans-serif;
+  background-color: white;
+  border-top: 1px dashed #1a61ff;
+}
+
+
+.fitem-1 h2,.fitem-2 h2,.fitem-3 h2{
+  color:#1a61ff;
+}
+
+.fitem-1 ul li {padding-top:4px}
+
+.fitem-1 ul {list-style-type: none;padding:0px}
+.fitem-1 ul li a {color: #33334f;text-decoration: none;}
+.fitem-1 ul li a:hover {color: #33334fd6;text-decoration: none;}
+.fitem-2 p {color:#33334f;}
+.our-app {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.email-form{
+  padding: 10px 30px;
+
+}
+
+.submit-button{
+  border: 1px solid #1a61ff;
+  padding: 11px 18px;
+  background-color: #1a61ff;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.submit-button:hover{
+  border:1px solid #1a61ff;
+  background-color:white;
+  color:#1a61ff;
+}
+
+/* social icons colors*/
+.fcolor {
+  color:dodgerblue;
+}
+
+.tcolor {
+  color:dodgerblue;
+}
+
+.licolor {
+  color:#0077B5
+}
+
+.instcolor{
+  color:rgb(195, 42, 163);
+}
+
+.mediumcolor{
+  color:rgba(0,0,0,.84);
+}
+.social{
+  padding-top:12px;
+  
+}
+
+.social i{
+  padding-right:15px;
+  
+}
+
+.social a{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.social a:hover{
+  opacity: 1.0;
+}
+
+
+
+/*Footer styles ends here*********************************************************/
