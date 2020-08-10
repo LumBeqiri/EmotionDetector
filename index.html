@@ -31,19 +31,21 @@
       
       <header class="opening_banner" style="text-align: center;">
         <h1>Emotion Detector Ahead!</h1>
-        <p>Turn on the camera, and start your journey of emotions</p>
+        <p>Turn on the camera, and start the journey of emotions</p>
       </header>
 
-      <section>
-        <button id="snap" onclick="snap()">Snap Photo</button>
-        <a id="downloadLnk" download="YourFileName.jpg">Download as image</a>
         
-        <div class="video-panel">
+        
+        <section class="video-panel">
             <video id="video" width="720" height="560" autoplay muted></video>
-        </div>
-        <canvas id="canvas" width="640" height="480"></canvas>
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
+            <a class="paragraph_style" style ="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as image</a>
+
+        </section>
+        
         <div id="screenshot"></div>
-      </section>
+
       
     
 
@@ -104,30 +106,30 @@
     </footer>  <!--footer ends here-->
 
     <script>
-        //code below used to only take a screenshot of the video not the expressions
-        // var videol=document.querySelector('video');
-        // var canvast=document.querySelector('canvas');
-        // var context=canvast.getContext('2d');
-        // var w,h,ratio;
+        // code below used to only take a screenshot of the video not the expressions
+        var videol=document.querySelector('video');
+        var canvast=document.querySelector('canvas');
+        var context=canvast.getContext('2d');
+        var w,h,ratio;
 
-        // videol.addEventListener('loadedmetadata', function() {
-        //     ratio = videol.videoWidth/videol.videoHeight;
-        //     w = video.videoWidth-100;
-        //     h = parseInt(w/ratio,10);
-        //     canvast.width = w;
-        //     canvast.height = h;
-        // },false);
+        videol.addEventListener('loadedmetadata', function() {
+            ratio = videol.videoWidth/videol.videoHeight;
+            w = video.videoWidth-100;
+            h = parseInt(w/ratio,10);
+            canvast.width = w;
+            canvast.height = h;
+        },false);
 
-        // function snap() {
-        //     context.fillRect(0,0,w,h);
-        //     context.drawImage(videol,0,0,w,h);
-        // }
+        function snap() {
+            context.fillRect(0,0,w,h);
+            context.drawImage(videol,0,0,w,h);
+        }
         
-        // function download() {
-        //     var dt = canvast.toDataURL('image/jpeg');
-        //     this.href = dt;
-        // };
-        // downloadLnk.addEventListener('click', download, false);
+        function download() {
+            var dt = canvast.toDataURL('image/jpeg');
+            this.href = dt;
+        };
+        downloadLnk.addEventListener('click', download, false);
 
         function myFunction() {
           var x = document.getElementById("myTopnav");

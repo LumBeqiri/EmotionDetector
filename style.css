@@ -64,9 +64,10 @@ body {
   }
 
 .video-panel {
+    display: flex;
+    flex-direction: column;
     margin-top: 40px;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -84,13 +85,40 @@ canvas {
 
 .opening_banner p {
   font-family: Poppins,sans-serif;
-    font-size: 20px;
-    color: #767ead;
-    line-height: 37px;
-    font-weight: 400; 
+  font-size: 20px;
+  color: #767ead;
+  line-height: 37px;
+  font-weight: 400; 
 }
 
+.paragraph_style{
+  font-family: Poppins,sans-serif;
+  font-size: 20px;
+  color: #767ead;
+  line-height: 37px;
+  font-weight: 400; 
+}
 
+/*Buttons*/
+.button{
+  transition: all .25s ease-out;
+  border-radius: 4px;
+  padding: 17px;
+  min-width: 125px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin: 0;
+  background: #1a61ff;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button:hover{
+  transform: translate3d(0,-2px,0);
+}
 
 /*Footer styles*************************************************************/
 

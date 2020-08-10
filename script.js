@@ -45,6 +45,7 @@ video.addEventListener('play', () => {
 
             document.getElementById('screenshot').appendChild(img)
         }
-    }, 100)
+    }, 100 )
    
 })
+
