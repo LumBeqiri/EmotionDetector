@@ -29,22 +29,26 @@
         </a>
       </div>
       
-      <div class="opening_banner" style="text-align: center;">
+      <header class="opening_banner" style="text-align: center;">
         <h1>Emotion Detector Ahead!</h1>
-        <p>Turn on the camera, and let it see your face</p>
-      </div>
+        <p>Turn on the camera, and start your journey of emotions</p>
+      </header>
+
+      <section>
+        <button id="snap" onclick="snap()">Snap Photo</button>
+        <a id="downloadLnk" download="YourFileName.jpg">Download as image</a>
+        
+        <div class="video-panel">
+            <video id="video" width="720" height="560" autoplay muted></video>
+        </div>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <div id="screenshot"></div>
+      </section>
       
-    <button id="snap" onclick="snap()">Snap Photo</button>
-    <a id="downloadLnk" download="YourFileName.jpg">Download as image</a>
-      
-    <div class="video-panel">
-        <video id="video" width="720" height="560" autoplay muted></video>
-    </div>
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <div id="screenshot"></div>
+    
 
 
-    <div class="footer">
+    <footer class="footer">
       <div class="fitem-1">
           <h2>Navigation</h2>
           <div class="footer-nav">
@@ -97,7 +101,7 @@
       </div>
 
 
-    </div>  <!--footer ends here-->
+    </footer>  <!--footer ends here-->
 
     <script>
         //code below used to only take a screenshot of the video not the expressions
