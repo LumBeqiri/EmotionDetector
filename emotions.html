@@ -18,33 +18,48 @@
 <body>
     <div class="topnav" id="myTopnav">
         <a href="index.html" ><img src="images/logo.svg" width="40px"></a>
-        <a href="index.html" class="active">Home</a>
-        <a href="emotions.html">Emotions</a>
-        <a href="#mission">Our mission</a>
+        <a href="index.html">Home</a>
+        <a href="#news" class="active">Emotions</a>
+        <a href="#contact">Our mission</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Contact</a>
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
       
-      <header class="content_style_poppins" style="text-align: center;">
-        <h1>Emotion Detector Ahead!</h1>
-        <p>Turn on the camera, and start the journey of emotions</p>
-      </header>
+      <div class="grid_by_two">
+          <div class="content_style_poppins item1">
+             <h1>Learn something about<br> Emotions</h1>
+             <p>
+                Emotions are biological states associated with the nervous system 
+                brought on by neurophysiological changes variously associated with thoughts, 
+                feelings, behavioural responses, and a degree of pleasure or displeasure. 
+                There is currently no scientific consensus on a definition
+             </p>
+          </div>
+          <div class="item2">
+              <img src="images/happy.svg" width="530px" height="370px">
+         </div>
+
+      </div>
+
+      <div class="grid_by_two_reversed">
+        <div>
+            <img src="images/communication.svg" width="530px" height="370px">
+       </div>
+        <div class="content_style_poppins">
+           <h1>The most important thing in communication is hearing what isn't said</h1>
+           <p>
+              The function of emotion appeared to have evolved from a physiological to a communicative one, allowing others to understand one’s emotional state.
+              Emotions have an external function, informing others about our internal states and feelings: emotional states have a communicative function.
+           </p>
+        </div>
+    </div>
 
         
-        
-        <section class="video-panel">
-            <video id="video" width="720" height="560" autoplay muted></video>
-            <canvas id="canvas" width="640" height="480"></canvas>
-            <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
-            <a class="paragraph_style" style ="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as image</a>
-
-        </section>
-        
-        <div id="screenshot"></div>
+   
 
       
     
@@ -56,9 +71,9 @@
           <div class="footer-nav">
               <ul>
                   <li><a href="index.php">Home</a></li>
-                  <li><a href="emotions.php">Emotions</a></li>
-                  <li><a href="mission.php">Our mission</a></li>
-                  <li><a href="about.php">About</a></li>
+                  <li><a href="categories.php">Emotions</a></li>
+                  <li><a href="about.php">Our mission</a></li>
+                  <li><a href="contact.php">About</a></li>
                   <li><a href="contact.php">Contact</a></li>
 
               </ul>
