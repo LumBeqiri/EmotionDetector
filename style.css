@@ -87,12 +87,12 @@ canvas {
   width: 100vw;
 }
 
-.opening_banner {
+.content_style_poppins {
   font-family: 'Poppins', sans-serif;
   color: #33334f;
 }
 
-.opening_banner p {
+.content_style_poppins p {
   font-family: Poppins,sans-serif;
   font-size: 20px;
   color: #767ead;
@@ -107,6 +107,30 @@ canvas {
   line-height: 37px;
   font-weight: 400; 
 }
+
+.grid_by_two{
+  display: flex;  
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.grid_by_two :first-child{
+  width: 540px;
+  margin-right:50px;
+}
+
+.grid_by_two_reversed{
+  display: flex;  
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.grid_by_two_reversed :last-child{
+  width: 540px;
+  margin-right:50px;
+}
+
 
 /*Buttons*/
 .button{
@@ -138,7 +162,7 @@ canvas {
   height: 290px;
   width: 100%;
   margin-top: 60px;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-top: 1px dashed #1a61ff;
 }
 
