@@ -269,8 +269,6 @@ canvas {
 
 /* Modal Content (Image) */
 .modal-content {
-  margin: auto;
-  display: block;
   width: 720px;
   max-width: 560px;
 }
