@@ -11,8 +11,8 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Emotions</title>
-    <script defer src="face-api.min.js"></script>
-    <script defer src="script.js"></script>
+
+
 </head>
 
 <body>
@@ -29,6 +29,7 @@
         </a>
       </div>
       
+
       <header class="content_style_poppins" style="text-align: center;">
         <h1>Emotion Detector Ahead!</h1>
         <p>Turn on the camera, and start the journey of emotions</p>
@@ -36,21 +37,24 @@
 
         
         
-        <section class="video-panel">
+      <div class="video_photo">
+        <div id="capture" class="video-panel">
             <video id="video" width="720" height="560" autoplay muted></video>
-            <canvas id="canvas" width="640" height="480"></canvas>
-        </section>
+            <canvas id="canvas" width="720px" height="560px"></canvas>
+        </div>
+         <div style = "width:720px;height:560px;" id="screenshot"></div>
+
+      </div>
         
+        
+
         <section class="button-panel">
             <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
             <a class="paragraph_style" style ="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as image</a>
         </section>
 
-        
-        <div id="screenshot"></div>
 
-      
-    
+        
 
 
     <footer class="footer">
@@ -107,18 +111,17 @@
 
 
     </footer>  <!--footer ends here-->
-
     <script>
         // code below used to only take a screenshot of the video not the expressions
         var videol=document.querySelector('video');
         var canvast=document.querySelector('canvas');
         var context=canvast.getContext('2d');
         var w,h,ratio;
-
+        var img_canvas;
         videol.addEventListener('loadedmetadata', function() {
             ratio = videol.videoWidth/videol.videoHeight;
-            w = video.videoWidth-100;
-            h = parseInt(w/ratio,10);
+            w = video.videoWidth +80;
+            h = video.height;
             canvast.width = w;
             canvast.height = h;
         },false);
@@ -126,13 +129,53 @@
         function snap() {
             context.fillRect(0,0,w,h);
             context.drawImage(videol,0,0,w,h);
+
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.getElementById('screenshot').appendChild(canvas)
+            img_canvas = canvas
+
+            
+        },);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      
         }
-        
+
+
         function download() {
-            var dt = canvast.toDataURL('image/jpeg');
-            this.href = dt;
+            saveAs(img_canvas.toDataURL(), 'file-name.png');
+
         };
         downloadLnk.addEventListener('click', download, false);
+
+        
+
+        function saveAs(uri, filename) {
+
+            var link = document.createElement('a');
+
+            if (typeof link.download === 'string') {
+
+                link.href = uri;
+                link.download = filename;
+
+                //Firefox requires the link to be in the body
+                document.body.appendChild(link);
+
+                //simulate click
+                link.click();
+
+                //remove the link when done
+                document.body.removeChild(link);
+
+            } else {
+
+                window.open(uri);
+
+            }
+        }
+        
+        
+      
 
         function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -142,6 +185,14 @@
             x.className = "topnav";
           }
         }
+
+        
+       
+
     </script>
+    <script src="html2canvas.js"></script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+
 </body>
 </html>

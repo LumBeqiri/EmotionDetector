@@ -70,7 +70,8 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 720px;
+    height:560px;
 }
 
 canvas {
@@ -131,6 +132,12 @@ canvas {
   margin-right:50px;
 }
 
+
+.video_photo{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+}
 
 /*Buttons*/
 .button{
