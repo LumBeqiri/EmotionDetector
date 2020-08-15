@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800", rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" , rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="style.css">
@@ -17,7 +19,7 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="index.html" ><img src="images/logo.svg" width="40px"></a>
+        <a href="index.html"><img src="images/logo.svg" width="40px"></a>
         <a href="index.html" class="active">Home</a>
         <a href="emotions.html">Emotions</a>
         <a href="#mission">Our mission</a>
@@ -25,119 +27,128 @@
         <a href="#contact">Contact</a>
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
         </a>
-      </div>
-      
+    </div>
 
-      <header class="content_style_poppins" style="text-align: center;">
+
+    <header class="content_style_poppins" style="text-align: center;">
         <h1>Emotion Detector Ahead!</h1>
         <p>Turn on the camera, and start the journey of emotions</p>
-      </header>
+    </header>
 
-        
-        
-      <div class="video_photo">
+
+
+    <div class="video_photo">
         <div id="capture" class="video-panel">
             <video id="video" width="720" height="560" autoplay muted></video>
             <canvas id="canvas" width="720px" height="560px"></canvas>
         </div>
-         <div style = "width:720px;height:560px;" id="screenshot"></div>
+        <div style="width:720px;height:550px; padding-top:50px" id="screenshot"></div>
 
-      </div>
-        
-        
-
-        <section class="button-panel">
-            <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
-            <a class="paragraph_style" style ="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as image</a>
-        </section>
+    </div>
 
 
-        
+
+    <section class="button-panel">
+        <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
+        <a class="paragraph_style" style="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as
+            image</a>
+    </section>
+
+
+
 
 
     <footer class="footer">
-      <div class="fitem-1">
-          <h2>Navigation</h2>
-          <div class="footer-nav">
-              <ul>
-                  <li><a href="index.php">Home</a></li>
-                  <li><a href="emotions.php">Emotions</a></li>
-                  <li><a href="mission.php">Our mission</a></li>
-                  <li><a href="about.php">About</a></li>
-                  <li><a href="contact.php">Contact</a></li>
+        <div class="fitem-1">
+            <h2>Navigation</h2>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="emotions.php">Emotions</a></li>
+                    <li><a href="mission.php">Our mission</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
 
-              </ul>
-          </div>
-      </div>
+                </ul>
+            </div>
+        </div>
 
-      <div class="fitem-2">
-              <h2>Newsletter</h2>
-              <div class"newsletter">
-                  <p>Enter your email address and subcribe daily newsletter</p>
-                  <form method="post">
-                      <input class="email-form"type="email" placeholder="johdoe@example.com">
-                      <button class="submit-button"type="submit" data-validation="required email">Subscribe</button>
-                  </form>
-              </div>
-  
-              <div class="social">
-                  <a href=""><i class="fab fcolor fa-facebook fa-2x"></i></a>
-                  <a href=""><i class="fab tcolor fa-twitter fa-2x"></i></a>
-                  <a href=""><i class="fab licolor fa-linkedin-in fa-2x"></i></a>
-                  <a href=""><i class="fab instcolor fa-instagram fa-2x"></i></a>
-                  <a href=""><i class="fab mediumcolor fa-medium fa-2x"></i></a>
-                  
-              </div>
-  
-          </div>
+        <div class="fitem-2">
+            <h2>Newsletter</h2>
+            <div class"newsletter">
+                <p>Enter your email address and subcribe daily newsletter</p>
+                <form method="post">
+                    <input class="email-form" type="email" placeholder="johdoe@example.com">
+                    <button class="submit-button" type="submit" data-validation="required email">Subscribe</button>
+                </form>
+            </div>
 
-      <div class="fitem-3">
-          <h2>Our app soon available</h2>
-          <div class="our-app">
-              <div class="ios-app">
-                  <a href="#"><img src="images/apple.svg" width="50px"></a>
-                  <p style="text-align: center">IOS</p>
-              </div>
-              <div class="android-app">
-                  <a style="padding-left: 10px" href="#"><img src="images/android.svg" width="50px" height="60px"></a>
-                  <p style="text-align: center">ANDROID</p>
-              </div>
-              
-          </div>
-          
-      </div>
+            <div class="social">
+                <a href=""><i class="fab fcolor fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fab tcolor fa-twitter fa-2x"></i></a>
+                <a href=""><i class="fab licolor fa-linkedin-in fa-2x"></i></a>
+                <a href=""><i class="fab instcolor fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab mediumcolor fa-medium fa-2x"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="fitem-3">
+            <h2>Our app soon available</h2>
+            <div class="our-app">
+                <div class="ios-app">
+                    <a href="#"><img src="images/apple.svg" width="50px"></a>
+                    <p style="text-align: center">IOS</p>
+                </div>
+                <div class="android-app">
+                    <a style="padding-left: 10px" href="#"><img src="images/android.svg" width="50px" height="60px"></a>
+                    <p style="text-align: center">ANDROID</p>
+                </div>
+
+            </div>
+
+        </div>
 
 
-    </footer>  <!--footer ends here-->
+    </footer>
+    <!--footer ends here-->
     <script>
         // code below used to only take a screenshot of the video not the expressions
-        var videol=document.querySelector('video');
-        var canvast=document.querySelector('canvas');
-        var context=canvast.getContext('2d');
-        var w,h,ratio;
+        var videol = document.querySelector('video');
+        var canvast = document.querySelector('canvas');
+        var context = canvast.getContext('2d');
+        var w, h, ratio;
         var img_canvas;
-        videol.addEventListener('loadedmetadata', function() {
-            ratio = videol.videoWidth/videol.videoHeight;
-            w = video.videoWidth +80;
+        videol.addEventListener('loadedmetadata', function () {
+            ratio = videol.videoWidth / videol.videoHeight;
+            w = video.videoWidth + 80;
             h = video.height;
             canvast.width = w;
             canvast.height = h;
-        },false);
+        }, false);
 
         function snap() {
-            context.fillRect(0,0,w,h);
-            context.drawImage(videol,0,0,w,h);
+            context.fillRect(0, 0, w, h);
+            context.drawImage(videol, 0, 0, w, h);
 
-            html2canvas(document.querySelector("#capture")).then(canvas => {
-            document.getElementById('screenshot').appendChild(canvas)
-            img_canvas = canvas
+            html2canvas(document.querySelector("#capture"),
+            {
+                scrollX : 0,
+                scrollY: -window.scrollY
+            }).then(canvas => {
+                document.getElementById('screenshot').appendChild(canvas)
+                img_canvas = canvas
 
-            
-        },);
-        context.clearRect(0, 0, canvas.width, canvas.height);
-      
+
+            }, );
+
+            // window.open('', document.getElementById('screenshot').toDataURL());
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
         }
 
 
@@ -147,7 +158,7 @@
         };
         downloadLnk.addEventListener('click', download, false);
 
-        
+
 
         function saveAs(uri, filename) {
 
@@ -173,26 +184,23 @@
 
             }
         }
-        
-        
-      
+
+
+
 
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-
-        
-       
-
     </script>
     <script src="html2canvas.js"></script>
     <script defer src="face-api.min.js"></script>
     <script defer src="script.js"></script>
 
 </body>
+
 </html>
