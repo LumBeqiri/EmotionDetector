@@ -81,7 +81,7 @@ canvas {
 .button-panel {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -251,3 +251,26 @@ canvas {
 
 
 /*Footer styles ends here*********************************************************/
+
+
+/* The Modal (background) */
+.modal {
+  display: none;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 720px;
+  max-width: 560px;
+}

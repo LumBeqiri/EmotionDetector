@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Emotions</title>
 
@@ -41,18 +47,16 @@
 
     <div class="video_photo">
         <div id="capture" class="video-panel">
-            <video id="video" width="720" height="560" autoplay muted></video>
+            <video id="video" width="720px" height="560px" autoplay muted></video>
             <canvas id="canvas" width="720px" height="560px"></canvas>
         </div>
-        <div style="width:720px;height:550px; padding-top:50px" id="screenshot"></div>
-
+        
     </div>
 
-
-
     <section class="button-panel">
+        <div class="modal" id="myModal"></div>
         <button class="button" style="z-index: 1;" id="snap" onclick="snap()">Snap Photo</button>
-        <a class="paragraph_style" style="cursor:pointer" id="downloadLnk" download="YourFileName.jpg">Download as
+        <a class="paragraph_style" style="cursor:pointer;margin-top: 10px" id="downloadLnk" download="YourFileName.jpg">Download as
             image</a>
     </section>
 
@@ -134,15 +138,20 @@
             context.fillRect(0, 0, w, h);
             context.drawImage(videol, 0, 0, w, h);
 
+            Swal.fire({
+                icon: 'success',
+                title: 'Snap Success!',
+                text: 'Click "Download as image" to download it',
+            })
+
             html2canvas(document.querySelector("#capture"),
             {
                 scrollX : 0,
                 scrollY: -window.scrollY
             }).then(canvas => {
-                document.getElementById('screenshot').appendChild(canvas)
+                document.getElementById('myModal').appendChild(canvas)
                 img_canvas = canvas
-
-
+            
             }, );
 
             // window.open('', document.getElementById('screenshot').toDataURL());
@@ -196,6 +205,7 @@
                 x.className = "topnav";
             }
         }
+
     </script>
     <script src="html2canvas.js"></script>
     <script defer src="face-api.min.js"></script>
