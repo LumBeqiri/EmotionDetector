@@ -190,6 +190,9 @@ canvas {
   line-height: 0px;
 }
 
+.android-app i{
+  color:#1a61ff
+}
 .email-form{
   padding: 10px 30px;
 
