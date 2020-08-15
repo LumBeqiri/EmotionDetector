@@ -175,7 +175,7 @@ canvas {
 
 
 .fitem-1 h2,.fitem-2 h2,.fitem-3 h2{
-  color:#1a61ff;
+  color:#33334f;
 }
 
 .fitem-1 ul li {padding-top:4px}
@@ -186,9 +186,10 @@ canvas {
 .fitem-2 p {color:#33334f;}
 .our-app {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  flex-direction: column;
+  line-height: 0px;
 }
+
 .email-form{
   padding: 10px 30px;
 
@@ -246,6 +247,15 @@ canvas {
 
 .social a:hover{
   opacity: 1.0;
+}
+
+.android-app{
+  display: flex;
+  align-items: center;
+}
+
+.android-app :first-child{
+  margin-right: 6px;
 }
 
 
