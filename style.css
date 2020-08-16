@@ -42,6 +42,9 @@ body {
   }
   
   @media screen and (max-width: 600px) {
+    .tile{
+      width:415px !important;
+    }
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -73,6 +76,9 @@ body {
     .grid_by_two_reversed div .responsive_image{
       width:408px;
     }
+
+    
+  
   }
   
   @media screen and (max-width: 600px) {
@@ -162,11 +168,77 @@ canvas {
 }
 
 
+.table_row{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 50px 40px;
+}
+
+.table_shelve {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tile{
+  display: flex;
+    width: 30%;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 50px;
+    min-height: 350px;
+    transition: all .25s ease-out;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.tile:hover{
+  transform: translateY(-4px);
+}
+
+.quote{
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box-icon{
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tile img {
+  max-width: 260px;
+    max-height: 85px;
+}
+
+.tile h3 {
+  font-size: 27px;
+  font-weight: 600;
+  color: #33334f;
+}
+
+.quote p{
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
 .about_slogan{
   text-align:center;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .about_slogan h1 {
