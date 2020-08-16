@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Emotions</title>
     <script defer src="face-api.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -122,40 +121,5 @@
 
     </footer>  <!--footer ends here-->
 
-    <script>
-        // code below used to only take a screenshot of the video not the expressions
-        var videol=document.querySelector('video');
-        var canvast=document.querySelector('canvas');
-        var context=canvast.getContext('2d');
-        var w,h,ratio;
-
-        videol.addEventListener('loadedmetadata', function() {
-            ratio = videol.videoWidth/videol.videoHeight;
-            w = video.videoWidth-100;
-            h = parseInt(w/ratio,10);
-            canvast.width = w;
-            canvast.height = h;
-        },false);
-
-        function snap() {
-            context.fillRect(0,0,w,h);
-            context.drawImage(videol,0,0,w,h);
-        }
-        
-        function download() {
-            var dt = canvast.toDataURL('image/jpeg');
-            this.href = dt;
-        };
-        downloadLnk.addEventListener('click', download, false);
-
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-    </script>
 </body>
 </html>
