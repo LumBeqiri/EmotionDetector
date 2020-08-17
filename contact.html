@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800", rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Emotions</title>
+    <script defer src="face-api.min.js"></script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html"><img src="images/logo.svg" width="40px"></a>
+        <a href="index.html">Home</a>
+        <a href="emotions.html">Emotions</a>
+        <a href="mission.html">Our mission</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+      
+    <div style ="text-align:center" class="content">
+        <div class="about_slogan">
+            <h1>Get in touch</h1>
+        </div>
+        <form role="form"  method="POST">
+                <div class="form-group">
+                    <input 
+                        class="text1"
+                        type="text" 
+                        placeholder="Your Name (required)"
+                        name="name" 
+                        data-validation="custom" 
+                        data-validation-regexp="^([a-zA-Z]+)$"
+                        data-validation-error-msg="You did not enter a valid name"
+                    >
+                </div>
+                <div class="form-group">
+                    <input 
+                        class="text1"
+                        type="email" 
+                        placeholder="Your Email (required)"
+                        name="email" 
+                        data-validation="required email"
+                    >
+                </div>
+                <div class="form-group">
+                    <textarea maxlength="150" name="message" class="text2" data-validation="required" placeholder="Your message" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button class="submit-button" type="submit" value="submit">Submit</button>
+                    <?php echo $succsses; ?>
+                </div>
+
+            </form>
+
+
+
+    
+</div>
+
+        
+   
+
+      
+    
+
+
+    <footer class="footer">
+      <div class="fitem-1">
+          <h2>Navigation</h2>
+          <div class="footer-nav">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="emotions.html">Emotions</a></li>
+                  <li><a href="mission.html">Our mission</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+
+              </ul>
+          </div>
+      </div>
+
+      <div class="fitem-2">
+              <h2>Newsletter</h2>
+              <div class"newsletter">
+                  <p>Enter your email address and subcribe daily newsletter</p>
+                  <form method="post">
+                      <input class="email-form"type="email" placeholder="johdoe@example.com">
+                      <button class="submit-button"type="submit" data-validation="required email">Subscribe</button>
+                  </form>
+              </div>
+  
+              <div class="social">
+                  <a href=""><i class="fab fcolor fa-facebook fa-2x"></i></a>
+                  <a href=""><i class="fab tcolor fa-twitter fa-2x"></i></a>
+                  <a href=""><i class="fab licolor fa-linkedin-in fa-2x"></i></a>
+                  <a href=""><i class="fab instcolor fa-instagram fa-2x"></i></a>
+                  <a href=""><i class="fab mediumcolor fa-medium fa-2x"></i></a>
+                  
+              </div>
+  
+          </div>
+
+          <div class="fitem-3">
+            <h2>Contacts</h2>
+            <div class="our-app">
+                <div class="android-app">
+                    <i class="fas fa-phone"></i>
+                    <p style="text-align: center"><span>Kosova:</span>(+383) 44 123 456</p>
+                </div>
+
+                <div class="android-app">
+                    <i class="fas fa-phone"></i>
+                    <p style="text-align: center"><span>USA:</span>(+1) 123 456 7891</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>  <!--footer ends here-->
+
+</body>
+</html>

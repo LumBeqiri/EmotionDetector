@@ -277,6 +277,49 @@ canvas {
   transform: translate3d(0,-2px,0);
 }
 
+/* Contact page styles */
+
+.content-text{
+  font-size: 50px;
+  text-align: center;
+  color: #1A61F9;
+} 
+
+.content{
+  padding: 10px;
+  margin: 16px 0;
+}
+
+.text1{
+    
+  margin: 16px 0;
+  text-align:left;
+  width:300px; 
+  padding: 20px;
+  outline:none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #1a61ff ; 
+  font-size: 20px;
+  
+}
+
+.text2{
+  margin: 16px 0;
+  text-align:left;
+  width:650px; 
+  padding: 20px;
+  outline:none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #1a61ff ; 
+  font-size: 20px;
+  border-radius:3px;
+
+}
+
 /*Footer styles*************************************************************/
 
 .footer{
