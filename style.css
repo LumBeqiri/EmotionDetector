@@ -300,9 +300,21 @@ canvas {
   background-color: #EE0000	
 }
 
+.disgust {
+  background-color: green	
+}
+
 .happy {
   background-color: #FCD116;
   
+}
+
+.surprised {
+  background-color: wheat;
+}
+
+.sad {
+  background-color: #33334f;
 }
 
 .fear {
