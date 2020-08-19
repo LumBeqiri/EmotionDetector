@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Emotions</title>
     <script defer src="face-api.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -65,8 +67,8 @@
     </div>
 
     <div class="about_slogan">
-        <h1>Four Basic emotions</h1>
-        <p class="paragraph_style">Happiness, Angry, Fear, Disgust</p>
+        <h1>Six Basic emotions</h1>
+        <p class="paragraph_style">Happiness, Anger, Fear, Disgust, Sadness, Surprise</p>
     </div>
 
     <div class="table_row">
@@ -74,8 +76,8 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                         <img src="images/happy.png" alt="smiley"> 
+                      <div id="happy-img" class="flip-card-front">
+                         <img src="images/happy.png" alt="smiley">
                       </div>
                       <div class="flip-card-back happy quote">
                         <h1>Happy</h1>
@@ -88,7 +90,7 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                      <div id="angry-img" class="flip-card-front">
                          <img src="images/angry.png" alt="angry"> 
                       </div>
                       <div class="flip-card-back angry quote">
@@ -105,11 +107,11 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                      <div id="scared-img" class="flip-card-front">
                          <img src="images/fear.png" width="300px" alt="fear"> 
                       </div>
                       <div class="flip-card-back fear quote">
-                        <h1>Fear</h1>
+                        <h1>Scared</h1>
                         <p>Fear is an emotion induced by perceived danger or threat,
                              which causes physiological changes and ultimately behavioral changes,
                               such as fleeing, hiding, or freezing from perceived traumatic events</p>
@@ -122,15 +124,14 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                      <div id="disgusted-img" class="flip-card-front">
                          <img src="images/disgusted.png" width="300px" alt="fear"> 
                       </div>
                       <div class="flip-card-back disgust quote">
                         <h1>Disgusted</h1>
-                        <p>Disgust is an emotion induced by perceived danger or threat,
-                             which causes physiological changes and ultimately behavioral changes,
-                              such as fleeing, hiding, or freezing from perceived traumatic events</p>
-                        
+                        <p>
+                            Disgust is an emotional response of rejection or revulsion to something potentially contagious or something considered offensive, distasteful, or unpleasant. 
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -139,14 +140,14 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                      <div id="sad-img" class="flip-card-front">
                          <img src="images/sad.png" width="300px" alt="sad"> 
                       </div>
                       <div class="flip-card-back sad quote">
                         <h1>Sad</h1>
-                        <p>Sadness is an emotion induced by perceived danger or threat,
-                             which causes physiological changes and ultimately behavioral changes,
-                              such as fleeing, hiding, or freezing from perceived traumatic events</p>
+                        <p>
+                            Sadness is an emotional pain associated with, or characterized by, feelings of disadvantage, loss, despair, grief, helplessness, disappointment and sorrow.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -155,14 +156,15 @@
             <div class="tile2 quote">
                 <div class="flip-card">
                     <div class="flip-card-inner">
-                      <div class="flip-card-front">
+                      <div id="surprised-img" class="flip-card-front">
                          <img src="images/surprised.png" width="300px" alt="surprised"> 
                       </div>
                       <div class="flip-card-back surprised quote">
                         <h1>Surprised</h1>
-                        <p>Surprise is an emotion induced by perceived danger or threat,
-                             which causes physiological changes and ultimately behavioral changes,
-                              such as fleeing, hiding, or freezing from perceived traumatic events</p>
+                        <p>
+                            Surprise is another one of the six basic types of human emotions originally described by Eckman. 
+                            Surprise is usually quite brief and is characterized by a physiological startle response following something unexpected. 
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -171,11 +173,6 @@
         </div>
     </div>
         
-   
-
-      
-    
-
 
     <footer class="footer">
       <div class="fitem-1">
@@ -233,6 +230,76 @@
 
 
     </footer>  <!--footer ends here-->
+
+    <!-- Happy Sound Swoosh -->
+    <audio id="happiness-audio" preload="auto">
+        <source src="audio/happiness.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <!-- Anger Sound Swoosh -->
+    <audio id="anger-audio" preload="auto">
+        <source src="audio/anger.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <!-- Fear Sound Swoosh -->
+    <audio id="fear-audio" preload="auto">
+        <source src="audio/fear.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <!-- Disgust Sound Swoosh -->
+    <audio id="disgust-audio" preload="auto">
+        <source src="audio/disgust.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <!-- Sadness Sound Swoosh -->
+    <audio id="sadness-audio" preload="auto">
+        <source src="audio/sadness.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <!-- Surprise Sound Swoosh -->
+    <audio id="surprise-audio" preload="auto">
+        <source src="audio/surprise.mp3"></source>
+        <source src="audio/yay.ogg"></source>
+    </audio>
+
+    <script>
+        // happiness
+        var happiness = $("#happiness-audio")[0];
+        $("#happy-img").mouseenter(function() {
+            happiness.play();
+        });
+
+        var anger = $("#anger-audio")[0];
+        $("#angry-img").mouseenter(function() {
+            anger.play();
+        });
+
+        var fear = $("#fear-audio")[0];
+        $("#scared-img").mouseenter(function() {
+            fear.play();
+        });
+
+        var disgust = $("#disgust-audio")[0];
+        $("#disgusted-img").mouseenter(function() {
+            disgust.play();
+        });
+
+        var sadness = $("#sadness-audio")[0];
+        $("#sad-img").mouseenter(function() {
+            sadness.play();
+        });
+
+        var surprise = $("#surprise-audio")[0];
+        $("#surprised-img").mouseenter(function() {
+            surprise.play();
+        });
+
+    </script>
 
 </body>
 </html>
