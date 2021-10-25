@@ -2,7 +2,7 @@ GUESS MY EMOTIONS
 
 How to run it:
 
-1) git clone https://github.com/LumBeqiri/uebmultimedia
+1) git clone https://github.com/LumBeqiri/GuesMyEmotions
 
 2) cd /path/to/repo
 
